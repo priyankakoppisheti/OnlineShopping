@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Product Manager</title>
+<link rel="stylesheet"  href="Ecomm.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+
+<nav > 
+<div class="nav1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/new">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="/Account.html">Login</a></li>
+               <a href="cart.html"><img src="../static/images/cart.png"  class="img" width="25px" height="30px" th:src="@{images/cart.png}"/>  </a> 
+            </ul>
+            </div>
+       
+      
+          </nav>     
+        
+         <div class="container">
+         <div class="smallContainer">
+        <div class="col-3">
+          <img src="../static/images/image2.jpg" th:src="@{images/image2.jpg}"/> 
+            <img src="../static/images/images4.jpg" th:src="@{images/images4.jpg}"/> 
+              <img src="../static/images/image5.jpg" th:src="@{images/image5.jpg}"/> 
+          </div>
+        </div>
+        </div>
+       
+ <!--  -
+<div align="center">
+    <h1>Product List</h1>
+    <a href="/new">Create New Product</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Made In</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listProducts}">
+                <td th:text="${product.id}">Product ID</td>
+                <td th:text="${product.name}">Name</td>
+                <td th:text="${product.brand}">Brand</td>
+                <td th:text="${product.madein}">Made in</td>
+                <td th:text="${product.price}">Price</td>
+                <td><a th:href="@{/edit/{id}(id=${product.id})}">Edit</a></td>
+                <td><a th:href="@{/delete/{id}(id=${product.id})}">Delete</a></td>
+                <td><a th:href="@{/home/{id}(id=${product.id})}">Home</a></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>  
+-->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row"><div class="col-2">
+            <img src="images/Diamond.jpg" width="100%">
+        </div>
+        <div class="row"><div class="col-2">
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                 </div>
+                 <form id="LoginForm">
+                     <input type="text"  placeholder="Username">
+                     <input type="password" placeholder="Password">
+                     <button type="submit" class="btn">Login</button>
+                     <a href="" >Forgot password</a>
+                 </form>
+                 <form id="RegForm">
+                    <input type="text"  placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                </form>
+
+
+            </div>
+        
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+ <div class="footer">
+       <div class="container">
+           <div class="row">
+               <div class="footer-col-1">
+                   <h3>Download Our App</h3>
+                   <p>Download App for Android and ios mobile phone.</p>
+                   <div class="app-logo">
+                       <img src="../static/images/play-store.png" th:src="@{images/play-store.png}"/>
+                       <img src="../static/images/app-store.png"  th:src="@{images/app-store.png}"/>
+                   </div>
+               </div>
+               <div class="footer-col-2">
+                <img src="../static/images/logo-white.png"  th:src="@{images/logo-white.png}"/>
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports
+                    Accessible to the Many.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+           </div>
+           <hr>
+           <p class="copyright"> copyright 2021-Edubridge learning Students </p>
+       </div>
+   </div> 
+</body>
+</html>
